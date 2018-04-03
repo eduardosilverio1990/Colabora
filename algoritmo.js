@@ -81,4 +81,7 @@ window.onload = function() {
 	map.on("locationfound", function(evento) {
 		L.marker(evento.latlng).addTo(map).bindPopup("Você está aqui!");
 	});
+
+  //13 – Medicao de distancias (plugin)
+	var medicaoDistancias = new L.control.polylineMeasure().addTo(map);
 }
