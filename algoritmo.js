@@ -18,4 +18,10 @@ window.onload = function() {
 		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 	}).addTo(map);
 	var osmColorido = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png");
+  
+  //3 - Camadas de sobreposiçao
+	var camadaGeojson = L.geoJson(estadosBrasil, {
+		style: obterSimbologia,
+		onEachFeature: colocarTooltips
+	}).addTo(map);
 }
