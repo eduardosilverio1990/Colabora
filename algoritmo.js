@@ -70,4 +70,9 @@ window.onload = function() {
 	for(var i=0; i<regioes.length; i++) {
 		document.getElementById("legenda").innerHTML += "<caixalegenda style='background-color:" + cores[i] + "'></caixalegenda> <textolegenda>" + regioes[i] + "</textolegenda> <br />";
 	}
+
+  //11 - Evento de clique (abrir popup que apresenta as coordenadas)
+	map.on("click", function(evento) {
+		L.popup().setLatLng(evento.latlng).setContent("Latitude: " + evento.latlng.lat.toFixed(2) + " Longitude: " + evento.latlng.lng.toFixed(2)).openOn(map);
+	});
 }
