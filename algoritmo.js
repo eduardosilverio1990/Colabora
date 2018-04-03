@@ -36,4 +36,9 @@ window.onload = function() {
 	}
 	
 	var controleCamadas = new L.control.layers(camadasBase, camadasSobreposicao).addTo(map);
+  
+  //5 - Funcao para anexar etiquetas com o nome de cada estado
+	function colocarTooltips(feicao, camada) {
+		camada.bindTooltip(feicao.properties.NOME);
+	}
 }
