@@ -55,4 +55,14 @@ window.onload = function() {
   
   //8 - Escala Gráfica
 	var escalaGrafica = new L.control.scale({position: "bottomright"}).addTo(map);
+  
+  //9 - Funcao para retornar objeto com a simbologia de cada estado
+    function obterSimbologia(feicao) {			
+	  return {
+	    weight: 0.5,
+	    color: "#000",
+		fillColor: cores[feicao.properties.GEOCODIGO[0]-1],
+		fillOpacity: 1
+	  }
+	}
 }
