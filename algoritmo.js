@@ -84,4 +84,7 @@ window.onload = function() {
 
   //13 – Medicao de distancias (plugin)
 	var medicaoDistancias = new L.control.polylineMeasure().addTo(map);
+  
+  //14 - Barra de Busca (plugin)
+	var barraBusca = L.Control.geocoder().addTo(map);
 }
