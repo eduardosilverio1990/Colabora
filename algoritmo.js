@@ -41,4 +41,8 @@ window.onload = function() {
 	function colocarTooltips(feicao, camada) {
 		camada.bindTooltip(feicao.properties.NOME);
 	}
+  
+  //6 - Mapa de Visao Geral (plugin)
+	var osmColorido2 = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png");
+	var mapaVisaoGeral = new L.Control.MiniMap(osmColorido2).addTo(map);
 }
