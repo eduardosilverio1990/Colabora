@@ -10,3 +10,26 @@ html, body {
 	height: 100%;
 	width: 100%;
 }
+
+/* 10 */
+#legenda {
+	position: absolute;
+	top: 30%;
+	right: 1%;	
+	z-index: 500;	
+}
+
+/* 10 */
+caixalegenda {
+	float: left;
+	height: 28px;
+	width: 28px;
+	border: 1px solid;
+	margin-right: 5px;
+}
+
+/* 10 */
+textolegenda {
+	line-height: 30px;
+	font-size: 20px;	
+}
