@@ -3,7 +3,7 @@ window.onload = function() {
 	var cores = ["#7fc97f", "#beaed4", "#fdc086", "#ffff99", "#386cb0"];
 	var regioes = ["Norte", "Nordeste", "Sudeste", "Sul", "Centro Oeste"];
 	
-	//1 - Mapa centrado no Brasil
+  //1 - Mapa centrado no Brasil
 	var map = L.map("meumapa", {
 		center: [-15, -49],
 		zoom: 4.5,
@@ -12,4 +12,10 @@ window.onload = function() {
 		minZoom: 4.5,
 		maxZoom: 8.5
 	});
+  
+  //2 - Camadas base
+	var osmPretoBranco = L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {
+		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	}).addTo(map);
+	var osmColorido = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png");
 }
