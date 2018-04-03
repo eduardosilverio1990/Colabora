@@ -74,5 +74,11 @@ window.onload = function() {
   //11 - Evento de clique (abrir popup que apresenta as coordenadas)
 	map.on("click", function(evento) {
 		L.popup().setLatLng(evento.latlng).setContent("Latitude: " + evento.latlng.lat.toFixed(2) + " Longitude: " + evento.latlng.lng.toFixed(2)).openOn(map);
+  }
+         
+  //12 - Adicionar posiçao do usuário ao mapa
+	map.locate();	
+	map.on("locationfound", function(evento) {
+		L.marker(evento.latlng).addTo(map).bindPopup("Você está aqui!");
 	});
 }
