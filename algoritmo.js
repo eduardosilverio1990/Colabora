@@ -64,5 +64,10 @@ window.onload = function() {
 		fillColor: cores[feicao.properties.GEOCODIGO[0]-1],
 		fillOpacity: 1
 	  }
+    }
+  
+  //10 - Legenda
+	for(var i=0; i<regioes.length; i++) {
+		document.getElementById("legenda").innerHTML += "<caixalegenda style='background-color:" + cores[i] + "'></caixalegenda> <textolegenda>" + regioes[i] + "</textolegenda> <br />";
 	}
 }
