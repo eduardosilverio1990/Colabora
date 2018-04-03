@@ -45,4 +45,11 @@ window.onload = function() {
   //6 - Mapa de Visao Geral (plugin)
 	var osmColorido2 = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png");
 	var mapaVisaoGeral = new L.Control.MiniMap(osmColorido2).addTo(map);
+  
+  //7 - Coordenadas do mouse (plugin) //Lembrar de editar o css para aumentar a letra das coordenadas
+	var coordenadasMouse = new L.control.mousePosition({
+		prefix: "Latitude: ",
+		separator: " Longitude: ",
+		numDigits: 2
+	}).addTo(map);
 }
