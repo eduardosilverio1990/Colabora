@@ -52,4 +52,7 @@ window.onload = function() {
 		separator: " Longitude: ",
 		numDigits: 2
 	}).addTo(map);
+  
+  //8 - Escala Gráfica
+	var escalaGrafica = new L.control.scale({position: "bottomright"}).addTo(map);
 }
